@@ -1,0 +1,725 @@
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-dark: #1a1d26;
+  --bg-darker: #13151c;
+  --bg-card: #222633;
+  --accent-red: #E0796C;
+  --text-white: #ffffff;
+  --text-muted: #9ba1b0;
+  --text-dim: #252734;
+  --border-color: #2b3040;
+  --container-max-width: 1440px;
+  --font-main: 'Helvetica Neue', system-ui, -apple-system, sans-serif;
+  --font-display: 'Helvetica Neue', 'Roboto', sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Links & Buttons */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+li {
+  margin-bottom: 24px;
+}
+
+/* Page Layout Containers */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* ==========================================================================
+   1. TITLE PAGE (Landing Page)
+   ========================================================================== */
+.title-page-body {
+  background-color: #1a1d26;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.title-page-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.title-content-box {
+  max-width: 600px;
+}
+
+.title-heading {
+  font-family: 'Alumni Sans';
+  font-size: 100px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.0;
+  color: var(--text-white);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.title-subheading {
+  font-family: 'Alumni Sans';
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 0.40em;
+  color: var(--text-white);
+  opacity: 0.9;
+  text-transform: lowercase;
+  margin-bottom: 60px;
+  padding-left: 5px;
+}
+
+.title-nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding-left: 5px;
+}
+
+.title-btn {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--text-white);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.title-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-red);
+  transition: width 0.3s ease;
+}
+
+.title-btn:hover {
+  color: var(--accent-red);
+}
+
+.title-btn:hover::after {
+  width: 100%;
+}
+
+/* Large Red Accent Circle on Title Page */
+.title-red-circle {
+  position: absolute;
+  right: -250px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 800px;
+  height: 800px;
+  background-color: var(--accent-red);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 80px rgba(232, 64, 49, 0.25);
+}
+
+/* Title Page Responsiveness */
+@media (max-width: 1200px) {
+  .title-heading {
+    font-size: 72px;
+  }
+
+  .title-red-circle {
+    width: 650px;
+    height: 650px;
+    right: -250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .title-page-container {
+    padding: 0 40px;
+  }
+
+  .title-heading {
+    font-size: 56px;
+  }
+
+  .title-subheading {
+    font-size: 18px;
+    letter-spacing: 0.25em;
+    margin-bottom: 40px;
+  }
+
+  .title-red-circle {
+    width: 500px;
+    height: 500px;
+    right: -200px;
+    opacity: 0.85;
+  }
+}
+
+@media (max-width: 600px) {
+  .title-page-container {
+    padding: 0 24px;
+  }
+
+  .title-heading {
+    font-size: 44px;
+  }
+
+  .title-subheading {
+    font-size: 16px;
+    letter-spacing: 0.2em;
+  }
+
+  .title-nav-buttons {
+    gap: 32px;
+  }
+
+  .title-btn {
+    font-size: 16px;
+  }
+
+  .title-red-circle {
+    width: 360px;
+    height: 360px;
+    right: -180px;
+    opacity: 0.7;
+  }
+}
+
+/* ==========================================================================
+   2. HEADER (Innowell+ & About Pages)
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(26, 29, 38, 0.95);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 24px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left Brand Link */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-white);
+  font-family: Alumni Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.brand-dot {
+  width: 14px;
+  height: 14px;
+  background-color: var(--accent-red);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.header-brand:hover .brand-dot {
+  transform: scale(1.15);
+  transition: transform 0.2s ease;
+}
+
+/* Right Header Nav Links */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-family: Helvetica Neue;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.nav-link {
+  font-size: 16px;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+/* Active and Inactive state definitions per prompt:
+   Active: font-weight: bold; color: #E84031;
+   Inactive: font-weight: light (300); color: #ffffff;
+*/
+.nav-link.active {
+  font-weight: 500;
+  color: var(--accent-red);
+}
+
+.nav-link.inactive {
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.nav-link.inactive:hover {
+  color: var(--accent-red);
+}
+
+/* ==========================================================================
+   3. INNOWELL+ PAGE (Case Study Content)
+   ========================================================================== */
+.case-study {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+/* Hero Banner & Phone Mockup */
+.hero-mockup-wrapper {
+  width: 100%;
+  /* background: #eef3f2; */
+  border-radius: 16px;
+  /* padding: 60px 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); */
+}
+
+.hero-phone-container {
+  /* max-width: 480px; */
+  width: 100%;
+}
+
+.hero-phone-container img,
+.hero-phone-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Case Study Header Info */
+.cs-header-info {
+  margin-bottom: 24px;
+}
+
+.cs-title-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.cs-main-title {
+  font-size: 48px;
+  color: var(--text-white);
+  font-family: 'Alumni Sans';
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.cs-main-subtitle {
+  font-size: 24px;
+  color: var(--text-white);
+  font-family: 'Alumni Sans';
+  font-weight: 300;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.cs-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.tag-pill {
+  padding: 6px 18px;
+  border: 1.5px solid var(--accent-red);
+  border-radius: 50px;
+  color: var(--text-dim);
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #E99F96;
+}
+
+.cs-intro-text {
+  line-height: 1.8;
+  color: #d1d5db;
+  /* max-width: 1100px; */
+  font-family: 'Helvetica Neue';
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0%;
+}
+
+.cs-divider {
+  border: none;
+  height: 1.5px;
+  background-color: #D64E3C;
+  margin: 0 0 24px 0;
+}
+
+.cs-img-wrapper {
+  padding: 20px 0 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.cs-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+.cs-list-heading {
+  /* margin-bottom: 24px; */
+  text-decoration: underline;
+}
+
+/* Content Sections */
+
+.cs-section {
+  margin-bottom: 80px;
+}
+
+.cs-section-title {
+  color: var(--text-white);
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 16px;
+  font-family: 'Helvetica Neue';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 29px;
+  letter-spacing: 0%;
+}
+
+.cs-section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  background-color: var(--accent-red);
+  border-radius: 2px;
+}
+
+.cs-paragraph {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+  /* max-width: 1100px; */
+}
+
+/* Diagrams & Showcase Wrapper */
+.diagram-container {
+  width: 100%;
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid var(--border-color);
+  margin: 40px 0;
+  overflow-x: auto;
+}
+
+.diagram-container img,
+.diagram-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.showcase-dark-bg {
+  background-color: #13151c;
+  border-radius: 16px;
+  padding: 40px 20px;
+}
+
+/* Figma Prototype Button */
+.prototype-btn-wrapper {
+  margin: 30px 0 50px 0;
+}
+
+.figma-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--accent-red);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 14px rgba(232, 64, 49, 0.3); */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.figma-btn:hover {
+  background-color: #d33426;
+  transform: translateY(-2px);
+  /* box-shadow: 0 6px 20px rgba(232, 64, 49, 0.4); */
+}
+
+/* iPhone Device Mockup Frame for Outcomes Video Player */
+.iphone-video-frame-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.iphone-bezel {
+  width: 100%;
+  max-width: 420px;
+  background: #18181b;
+  border: 4px solid #27272a;
+  border-radius: 48px;
+  padding: 12px;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.iphone-notch {
+  width: 130px;
+  height: 24px;
+  background: #000000;
+  border-radius: 12px;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.iphone-screen {
+  width: 100%;
+  border-radius: 36px;
+  overflow: hidden;
+  background: #000000;
+  position: relative;
+}
+
+.iphone-screen video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.iphone-home-bar {
+  width: 120px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 2px;
+  margin: 12px auto 4px auto;
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   4. ABOUT PAGE
+   ========================================================================== */
+.about-hero {
+  padding: 60px 0 40px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-avatar-card {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.avatar-image-placeholder {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-red), #ff7a6b);
+  margin: 0 auto 24px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(232, 64, 49, 0.3);
+}
+
+.avatar-name {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-family: 'Alumni Sans';
+  line-height: 29px;
+  letter-spacing: 0%;
+}
+
+.avatar-role {
+  font-size: 15px;
+  color: var(--accent-red);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: var(--accent-red);
+  transform: translateY(-3px);
+}
+
+.about-bio-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.highlight-red {
+  color: var(--accent-red);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-category {
+  background: var(--bg-card);
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+}
+
+.skill-cat-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent-red);
+  margin-bottom: 16px;
+}
+
+.skill-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-badge {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #e2e8f0;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+.site-footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--border-color);
+  margin-top: 80px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 14px;
+}
