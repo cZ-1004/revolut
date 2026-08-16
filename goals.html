@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals — Case Study | Brandon Wong</title>
+    <meta name="description"
+        content="Case study on Innowell+, an evidence-based digital mental health platform for self-assessment, care planning, and clinical integration.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Antonio:wght@700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Persistent Site Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <!-- Left side: Red circle + Brandon Wong -->
+            <a href="index.html" class="header-brand" title="Back to Title Page">
+                <span class="brand-dot" aria-hidden="true"></span>
+                <span>BRANDON WONG</span>
+            </a>
+
+            <!-- Right side: Innowell+ (Active) & About (Inactive) -->
+            <nav class="header-nav" aria-label="Main Navigation">
+                <a href="innowell.html" class="nav-link inactive">Innowell+</a>
+                <a href="goals.html" class="nav-link active">Goals</a>
+                <a href="about.html" class="nav-link inactive">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Case Study Content -->
+    <main class="case-study">
+        <div class="container">
+
+            <!-- Hero Showcase Banner (Single iPhone in Mint Card) -->
+            <div class="hero-mockup-wrapper">
+                <div class="hero-phone-container">
+                    <img src="assets/heroGoals.png" width="100%" alt="Goal Setting feature in Smartphone Mockup">
+                </div>
+            </div>
+
+            <!-- Case Study Header Metadata -->
+            <section class="cs-header-info">
+                <div class="cs-title-row">
+                    <h1 class="cs-main-title">Goals</h1>
+                    <h3 class="cs-main-subtitle">INNOWELL</h3>
+                </div>
+
+                <div class="cs-tags">
+                    <span class="tag-pill">UI/UX</span>
+                    <span class="tag-pill">Feature Design</span>
+                    <span class="tag-pill">Product Strategy</span>
+                    <span class="tag-pill">Developer Handoff and Support</span>
+                </div>
+
+                <p class="cs-intro-text">
+                    Patient’s use a range of tools to improve their mental well-being including domain assessments,
+                    content and goal setting. Throughout the industry, goal setting is done either manually on pen and
+                    paper or on outdated mediums like Word or Excel. These methods are susceptible to easily being lost
+                    or at best, remain isolated from other patient data.
+                    <br><br>
+                    With Innowell+, we set out to digitise the goal setting process to allow patients and clinicians
+                    instant access
+                    to their goals while also tracking the data to strengthen our support in their mental health
+                    journey.
+                </p>
+            </section>
+
+            <hr class="cs-divider">
+
+            <!-- 1. Problem Section -->
+            <section class="cs-section">
+                <h2 class="cs-section-title">Challenge</h2>
+                <p class="cs-paragraph">
+                    Innowell+ required a feature that would drive usage whilst also providing benefit to improving a
+                    user’s mental wellbeing. Goal Setting is a commonly used methodology and was unanimously agreed on,
+                    in
+                    conjunction with our clinical research partners at the University of Sydney’s Brain and Mind Centre,
+                    to be the best feature to provide the most value to patients.
+                    <Br /><br />
+                    Creating a digital goal setting feature inside Innowell+ would supercharge the app by
+                <ul style="padding-left: 40px; color: #cbd5e1;">
+                    <li class="cs-paragraph">Eliminating the risk of losing paper-based goals.</li>
+                    <li class="cs-paragraph">Enable data that can be tracked and applied to the patient’s overall
+                        context
+                    </li>
+                    <li class="cs-paragraph">Enable more seamless communication with clinicians e.g. a patient could
+                        create a goal and submit it for the clinician to review</li>
+                </ul>
+                </p>
+            </section>
+
+            <div class="cs-img-wrapper">
+                <img src="assets/phonesGoals.png" width="100%" alt="Mockup of Goals feature in mobile device">
+            </div>
+
+            <!-- 2. Process Section -->
+            <section class="cs-section">
+                <h2 class="cs-section-title">Workflow</h2>
+                <p class="cs-paragraph">
+                    Using the double diamond methodology, my first step was exploring the problem space further and
+                    defining what we wanted to achieve. I had a number of meetings with Mental Health Services and the
+                    Brain and Mind Centre (BMC) - who were trialling their own paper-based version
+                    of goal setting (named Functional Recovery Plan) - to understand how my thinking aligned with their
+                    direction.
+                    <Br /><br />
+                    The BMC genuinely supported and encouraged the development of the feature, outlining the importance
+                    of goal setting in the mental wellbeing treatment of patients. Whilst they had their ideas on how
+                    the feature should function - for example wanting the process to be done in one sreen, they strongly
+                    supported my decision to encourage goal creation to
+                    follow the SMART framework (Specific, Measurable, Achievable, Relevant and Time-Based), a framework
+                    designed to provide maximum effectiveness by encouraging patients to measure their goals against
+                    these five pillars.
+                    <Br /><br />
+                    During research sessions with various services where I presented my ideas and plan, the feedback was
+                    very encouraging with the usual response being “When can we have it?”.
+                    <Br /><br />
+                    From these discussions it became very clear that there needed to be a digital solution to
+                    the current manual,
+                    paper-based goal tracking method and that this digital solution could be linked to other data in a
+                    patient’s mental health journey.
+                </p>
+
+                <div class="cs-img-wrapper">
+                    <img src="assets/functionalRecovery.png" width="100%"
+                        alt="Image of Functional Recovery Plan from BMC">
+                </div>
+
+                <p class="cs-paragraph">
+                    After the research sessions and defining the problem, the next stage was understanding the
+                    requirements to solve the problem and how we would measure it. The first step was to start exploring
+                    user flows in Figma.
+                    <br /><br />
+                    Exploring the BMC’s suggestion to keep the user flow to one step, I wanted to see if goal creation
+                    could be done in a modal. A one-click entry point would display a modal with a form to enter the
+                    goal details then after clicking a ‘Create’ and the goal would display on the homepage. In theory
+                    this made sense but after exploring designs in Figma I discovered that the modal was
+                    becoming too complicated and crucial steps were being missed.
+                    <br /><br />
+                    Sometimes what may seem the most simple solution is not always the case.
+                </p>
+
+                <div class="cs-img-wrapper">
+                    <img src="assets/goalCreation.png" width="100%" alt="Design exploration of goal creation modal">
+                </div>
+
+                <p class="cs-paragraph">
+                    I quickly pivoted and explored a scenario where the user journey was broken into steps and from a
+                    high level, it looked something like this
+                <ul style="padding-left: 40px; color: #cbd5e1;">
+                    <li class="cs-paragraph" style="list-style: none">1. Entry point to create a goal</li>
+                    <li class="cs-paragraph" style="list-style: none">2. Add goal details including Goal name, end date
+                        and actions
+                    </li>
+                    <li class="cs-paragraph" style="list-style: none">3. Allow option for clinician review of goal</li>
+                    <li class="cs-paragraph" style="list-style: none">4. Display goal</li>
+                    <li class="cs-paragraph" style="list-style: none">5. Archive goal</li>
+                </ul>
+                </p>
+
+
+                <p class="cs-paragraph">
+                    Though I felt this could be achieved in one screen, I was comfortable in breaking the flow into
+                    steps to help keep a clean flow and guide the user to complete their task and minimise error risk
+                    and ultimately, most of the risk lied in the goal creation from. To mitigate this risk and tighten
+                    the user journey, we needed proper validation on three things
+                <ul style="padding-left: 40px; color: #cbd5e1;">
+                    <li class="cs-paragraph" style="list-style: none">1. The input fields - character limits to ensure
+                        inputs remain focused and UI is not compromised</li>
+                    <li class="cs-paragraph" style="list-style: none">2. Number of action items - Limiting these to 5
+                        will help guide the user to determine how to structure their goal
+                    </li>
+                    <li class="cs-paragraph" style="list-style: none">3. Number of goals - Without limiting the number
+                        of goals a patient can create, there will be a reduced focused and a risk of goals being left
+                        incomplete.</li>
+                </ul>
+                </p>
+
+                <p class="cs-paragraph">If I could keep the journey succinct to no more than 3 steps with logical
+                    validations, it would be a result I would be happy to present for feedback.</p>
+
+
+                <div class="cs-img-wrapper">
+                    <img src="assets/imageFlow.png" width="100%" alt="Image showing the user flow of Goals">
+                </div>
+
+
+                <p class="cs-paragraph">Designing the goal cards, I had the designer’s age-old problem of organising
+                    vast amount of information in a small space. As these cards could be displayed on the Home Screen, I
+                    wanted to keep them at a relatively small size to maintain a visual balance. Elements within the
+                    card that I needed to consider were Goal Based Outcome (GBO) score, goal name, goal description,
+                    progress bar, date created, end date and actions such as archive and delete.
+                    <br /><br />
+                    The GBO is a slider that allows the user to rate how they are tracking with the goal. It was an
+                    element that came to my attention while working on a tender for the Canadian government and I had
+                    included it for the tender. I explored various input options such as a slider or input field however
+                    in the end, we decided to remove it as the tender bid failed and we
+                    believed, along with the BMC, it was not a requirement at this early stage.
+                    <br /><br />
+                    Developing the information architecture of the card, I decided that information such as date
+                    created, end date, progress percentage and achieved date could be grouped behind an information
+                    tooltip as they were supplementary, and pushing this further having an achieved date was redundant
+                    because any goals that had
+                    been achieved were stored in a separate section.
+                    <br /><br />
+                    Actions such as delete and edit did not need to be exposed all the time, so they could be placed
+                    behind an overflow button. Placing the tooltip and overflow menu subtly in the top right of
+                    the goal card opened the card up with more space which helped focus on what’s important - goal
+                    information and action items.
+                    <br /><br />
+                    By organising the information architecture, the design of the goal card came together almost by
+                    itself. Placing the information tooltip and overflow menu in intuitive locations, created space for
+                    the progress bar. With the top section fitting nicely, the remaining space housed the goal
+                    information perfectly.
+                </p>
+
+                <div class="cs-img-wrapper">
+                    <img src="assets/cardEvolution.png" width="100%" alt="Design explorations of card component">
+                </div>
+
+                <p class="cs-paragraph">Now that I was comfortable with the flow and designs, it was time to review with
+                    the BMC. They had suggested having the ability for a patient to create a goal from a template citing
+                    that a blank form may be overwhelming to some patients, making the task seemingly too large and
+                    causing them to avoid it all together. This made sense and so, before the goal form, I included a
+                    screen listing goal templates that the patient could skip if they wanted to create a goal on their
+                    own.
+                    <br /><br />
+                    I was initially hesitant on BMC’s suggestion as I knew this would be scope creep because including
+                    default templates was more than just adding templates - it meant that there had to be a management
+                    portal, either for our company, the services or both. Planning and building out such a portal would
+                    increase development time so for our first release, I decided the development team would be made
+                    aware of the need for a management portal but for the first version, we would release with a default
+                    set of templates across all services and they would be built knowing a management portal was to
+                    come.
+                    <br /><br />
+                    By now, I was feeling confident we had a solid feature that would address the problem we wanted to
+                    solve. After presenting to the wider team, I put together the required resources:
+                <ul style="padding-left: 40px; color: #cbd5e1;">
+                    <li class="cs-paragraph">Confluence document explaining the why, what and
+                        how. Important for the business including senior leadership and sales department.</li>
+                    <li class="cs-paragraph">Final pixel-perfect UI and up-to-date design
+                        system to make developers and testers life as easy as possible.
+                    </li>
+                    <li class="cs-paragraph">Clear and structured user stories to ensure a
+                        smooth build process.</li>
+                </ul>
+                </p>
+                <p class="cs-paragraph">
+                    I worked closely with the developers to answer any queries or missed acceptance criteria during the
+                    build and after one 2 week sprint, the Goals feature was released to the desktop platform and the
+                    mobile
+                    app.
+                </p>
+
+            </section>
+
+            <!-- 5. Prototype Section -->
+            <section class="cs-section">
+                <h2 class="cs-section-title">Figma Prototypes</h2>
+                <p class="cs-paragraph">
+                    Explore a prototype of the Goal feature within Innowell+. If the Figma embed
+                    below does
+                    not work, you can click <a
+                        href="https://www.figma.com/proto/kpBiGYG5p5WVqb20QjZoJO/Innowell-?node-id=2904-7662&viewport=330%2C577%2C0.25&t=nmJcf76hIf9oLe00-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2904%3A7662&show-proto-sidebar=1&page-id=1686%3A3224"
+                        target="_blank" rel="noopener noreferrer"
+                        style="text-decoration: underline; font-weight: 900;">here</a> to
+                    view the prototype in a new tab.
+                </p>
+
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="1000"
+                    src="https://embed.figma.com/proto/kpBiGYG5p5WVqb20QjZoJO/Innowell-?node-id=2904-7662&viewport=330%2C577%2C0.25&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2904%3A7662&show-proto-sidebar=1&page-id=1686%3A3224&embed-host=share"
+                    allowfullscreen></iframe>
+            </section>
+
+
+
+            <!-- 6. Outcomes Section -->
+            <section class="cs-section">
+                <h2 class="cs-section-title">Outcomes</h2>
+                <p class="cs-paragraph">
+                    During the process, discussions around measuring the success of the feature was
+                    challenging. Ideally measuring how a patient’s mental health improved thanks to the Goal feature
+                    would be ideal, but this was impossible. So, leadership team and I settled on target metrics of
+                </p>
+                <ul style="padding-left: 40px; color: #cbd5e1;">
+                    <li class="cs-paragraph">1,000 goals created in the first month of release</li>
+                    <li class="cs-paragraph">Over 80% user satisfaction with the feature, measured with a survey
+                    </li>
+                </ul>
+
+                <div class="cs-img-wrapper">
+                    <img src="assets/satisfactionSurvey.png" width="100%"
+                        alt="Image of satisfaction survey showing 92% satisfaction with Goals">
+                </div>
+
+
+                <p class="cs-paragraph">
+                    Both of these metrics were exceeded with
+                </p>
+
+                <ul style="padding-left: 40px; color: #cbd5e1;">
+                    <li class="cs-paragraph">Over 2,000 goals set in the first month of release</li>
+                    <li class="cs-paragraph">Over 90% of 43 clinicians that reponded to the survey were satisfied with
+                        the feature
+                    </li>
+                </ul>
+
+                <p class="cs-paragraph">
+                    Furthermore. we believe the goal feature was a key driver in an increase in downloads. Goals was
+                    released not long after the app launch so while it was difficult to link number of downloads to the
+                    feature, clinicians explicitly spoke about encouraging their patients to download the app to use
+                    goals.<Br /><br />
+                    Leading this project while navigating its challenges, seeing my ideas come to life, exceeding the
+                    goals we set out for the feature
+                    and knowing that my work had a direct impact on people's lives was not only personally rewarding but
+                    encouraged my growth as a product designer.
+                </p>
+
+                <div style="width: 100%; background-color: #1B1B1B; display: flex; justify-content: center;">
+                    <video controls style="width: 40%;" preload="metadata">
+                        <source src="assets/goalsDemo.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p class="cs-paragraph">&copy; 2026 Brandon Wong. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
